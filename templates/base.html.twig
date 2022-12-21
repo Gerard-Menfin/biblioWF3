@@ -7,16 +7,6 @@
         {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
         {% block stylesheets %}
             {{ encore_entry_link_tags('app') }}
-            <style>
-                img.miniature { height: 100px; width: auto; }
-            </style>
-        {% endblock %}
-
-        {% block javascripts %}
-            {{ encore_entry_script_tags('app') }}
-        {% endblock %}
-
-
         <!-- CSS : Bootstrap, FontAwesome -->
         <link rel="stylesheet" 
             href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" 
@@ -26,6 +16,19 @@
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" 
             integrity="sha512-0S+nbAYis87iX26mmj/+fWt1MmaKCv80H+Mbo+Ne7ES4I6rxswpfnC6PxmLiw33Ywj2ghbtTw0FkLbMWqh4F7Q==" 
             crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+            <style>
+                body {
+                    background: lightblue !important;
+                }
+                img.miniature { height: 100px; width: auto; }
+            </style>
+        {% endblock %}
+
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+        {% endblock %}
+
 
         <!-- JS : jQuery, Bootstrap 4.6 -->
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
