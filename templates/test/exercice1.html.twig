@@ -1,0 +1,18 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+    <h2 class="text-success">voici la solution de l'exercice</h2>
+    <p>La variable a vaut {{ a }}</p>
+    <p>a * 2 = {{ a * 2 }}</p>
+    
+    {% if a > 10 %}
+        <p>La variable a a une valeur supérieure à 10</p>
+    {% elseif a is same as ("10") %}
+        <p>La variable a vaut 10</p>
+    {% else %}
+        <p>La variable a est inférieure à 10</p>
+    {% endif %}
+
+    <p>Le caractère de concaténation est <code>~</code></p>
+    <p>{{ "La variable a vaut " ~ a ~ "." }}</p>
+{% endblock %}
